@@ -24,18 +24,38 @@
   });
 })();
 
-// ----- Sticky header shadow on scroll -----
-(function initHeaderScroll() {
-  const header = document.getElementById('site-header');
-  if (!header) return;
+// ----- Scroll progress bar + header shadow + back-to-top -----
+(function initScrollUI() {
+  const header  = document.getElementById('site-header');
+  const bar     = document.getElementById('scroll-progress');
+  const backTop = document.getElementById('back-to-top');
 
   const onScroll = () => {
-    header.style.boxShadow = window.scrollY > 10
-      ? '0 2px 16px rgba(0,0,0,.45)'
-      : '0 2px 12px rgba(0,0,0,.3)';
+    const scrolled = window.scrollY;
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+
+    // Progress bar
+    if (bar) bar.style.width = docH > 0 ? (scrolled / docH * 100) + '%' : '0%';
+
+    // Header shadow
+    if (header) header.style.boxShadow = scrolled > 10
+      ? '0 2px 20px rgba(74,53,200,.18)'
+      : '0 1px 8px rgba(74,53,200,.07)';
+
+    // Back-to-top visibility
+    if (backTop) {
+      backTop.hidden = scrolled < 400;
+    }
   };
 
   window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Back-to-top click
+  if (backTop) {
+    backTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 })();
 
 // ----- Active nav link highlighting -----
@@ -63,11 +83,16 @@
 (function initFadeUp() {
   const animatable = [
     '.hero-content',
-    '.hero-photo-wrap',
+    '.hero-photo-col',
+    '.bio-photo-col',
     '.bio-text',
     '.bio-stat-grid',
-    '.why-body',
+    '.bio-stat-grid .stat-card',
+    '.why-photo-col',
+    '.why-content',
     '.priority-card',
+    '.gallery-item',
+    '.gallery-follow',
     '.quote-card',
     '.endorse-groups',
     '.involved-volunteer',

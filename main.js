@@ -84,17 +84,20 @@
   const animatable = [
     '.hero-content',
     '.hero-photo-col',
+    '.proof-item',
     '.bio-photo-col',
     '.bio-text',
-    '.bio-stat-grid',
-    '.bio-stat-grid .stat-card',
+    '.stat-card',
     '.why-photo-col',
     '.why-content',
     '.priority-card',
     '.gallery-item',
     '.gallery-follow',
+    '.donate-header',
+    '.donate-amounts',
     '.quote-card',
     '.endorse-groups',
+    '.press-strip-inner',
     '.involved-volunteer',
     '.involved-email',
     '.district-info',
@@ -173,6 +176,72 @@
       success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
   });
+})();
+
+// ----- Election countdown timer -----
+(function initCountdown() {
+  const elDays  = document.getElementById('cd-days');
+  const elHours = document.getElementById('cd-hours');
+  const elMins  = document.getElementById('cd-mins');
+  const elSecs  = document.getElementById('cd-secs');
+  if (!elDays) return;
+
+  // Election Day: August 18, 2026, 7:00 AM Eastern
+  const target = new Date('2026-08-18T07:00:00-04:00');
+
+  function pad(n, len) { return String(n).padStart(len, '0'); }
+
+  function update() {
+    const diff = target - Date.now();
+    if (diff <= 0) {
+      elDays.textContent  = '0';
+      elHours.textContent = '00';
+      elMins.textContent  = '00';
+      elSecs.textContent  = '00';
+      return;
+    }
+    const days  = Math.floor(diff / 86400000);
+    const hours = Math.floor((diff % 86400000) / 3600000);
+    const mins  = Math.floor((diff % 3600000)  / 60000);
+    const secs  = Math.floor((diff % 60000)    / 1000);
+
+    elDays.textContent  = days;
+    elHours.textContent = pad(hours, 2);
+    elMins.textContent  = pad(mins, 2);
+    elSecs.textContent  = pad(secs, 2);
+  }
+
+  update();
+  setInterval(update, 1000);
+})();
+
+// ----- Donate frequency toggle (One-Time / Monthly) -----
+(function initDonateToggle() {
+  const btnOnce    = document.getElementById('freq-once');
+  const btnMonthly = document.getElementById('freq-monthly');
+  const amountGrid = document.getElementById('donate-amounts');
+  if (!btnOnce || !btnMonthly || !amountGrid) return;
+
+  // Base ActBlue URL
+  const base = 'https://secure.actblue.com/donate/juliorochafordistrict8';
+  const amounts = [10, 25, 50, 100, 250]; // 'other' always goes to base
+
+  function setFreq(monthly) {
+    btnOnce.classList.toggle('active', !monthly);
+    btnMonthly.classList.toggle('active', monthly);
+
+    amountGrid.querySelectorAll('.donate-amt-card[data-amount]').forEach(card => {
+      const amt = card.dataset.amount;
+      if (amt === 'other') {
+        card.href = base;
+      } else {
+        card.href = base + '?amount=' + amt + (monthly ? '&recurring=1' : '');
+      }
+    });
+  }
+
+  btnOnce.addEventListener('click',    () => setFreq(false));
+  btnMonthly.addEventListener('click', () => setFreq(true));
 })();
 
 // ----- Smooth scroll polyfill for browsers without native support -----

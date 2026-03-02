@@ -96,25 +96,6 @@
   elements.forEach(el => observer.observe(el));
 })();
 
-// ----- Donate amount selector -----
-(function initDonateButtons() {
-  const grid = document.getElementById('amount-grid');
-  const customWrap = document.getElementById('custom-amount-wrap');
-  if (!grid) return;
-
-  grid.addEventListener('click', e => {
-    const btn = e.target.closest('.amount-btn');
-    if (!btn) return;
-
-    grid.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-
-    if (customWrap) {
-      customWrap.hidden = btn.dataset.amount !== 'other';
-    }
-  });
-})();
-
 // ----- Volunteer form -----
 (function initVolunteerForm() {
   const form    = document.getElementById('volunteer-form');

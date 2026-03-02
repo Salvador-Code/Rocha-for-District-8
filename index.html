@@ -7,7 +7,7 @@
   <title>Rocha for District 8 | Orange County Commissioner</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,18 +16,28 @@
   <header class="site-header" id="site-header">
     <div class="container nav-inner">
       <a href="#hero" class="nav-logo">
-        <span class="logo-name">Julio Rocha</span>
-        <span class="logo-seat">District 8</span>
+        <!-- Citrus / Florida icon matching logo -->
+        <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="22" r="15" fill="#f47c20"/>
+          <path d="M20 7 C20 7 26 12 26 22 C26 29 23 35 20 37 C17 35 14 29 14 22 C14 12 20 7 20 7Z" fill="#fff" opacity=".25"/>
+          <line x1="20" y1="7" x2="20" y2="37" stroke="#fff" stroke-width="1.2" opacity=".3"/>
+          <line x1="5" y1="22" x2="35" y2="22" stroke="#fff" stroke-width="1.2" opacity=".3"/>
+          <path d="M20 5 C20 5 18 2 16 2 C17 4 19 5 20 7 C21 5 23 4 24 2 C22 2 20 5 20 5Z" fill="#4a35c8"/>
+        </svg>
+        <div class="nav-logo-text">
+          <span class="logo-name">Julio Rocha</span>
+          <span class="logo-seat">District 8 · Orange County</span>
+        </div>
       </a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <nav class="nav-links" id="nav-links">
         <a href="#hero">Home</a>
-        <a href="#bio">Meet Julio</a>
+        <a href="#bio">About</a>
         <a href="#priorities">Priorities</a>
         <a href="#involved">Get Involved</a>
-        <a href="#donate" class="nav-donate-btn">Donate</a>
+        <a href="https://secure.actblue.com/donate/juliorochafordistrict8" target="_blank" rel="noopener" class="nav-donate-btn">Donate</a>
       </nav>
     </div>
   </header>
@@ -37,76 +47,96 @@
     <!-- ===== 1. HERO ===== -->
     <section class="hero" id="hero">
       <div class="container hero-inner">
+
+        <!-- Left: Logo lockup card (matches current site aesthetic) -->
         <div class="hero-photo-wrap">
-          <div class="hero-photo-placeholder" aria-label="Photo of Julio Rocha">
-            <svg viewBox="0 0 400 520" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect width="400" height="520" fill="#1a3a6b"/>
-              <circle cx="200" cy="190" r="90" fill="#2d5fa6"/>
-              <path d="M60 520 C60 380 340 380 340 520" fill="#2d5fa6"/>
-              <text x="200" y="200" text-anchor="middle" fill="#c8a44a" font-size="28" font-family="serif" font-weight="bold">JR</text>
+          <div class="hero-logo-lockup">
+            <!-- Campaign logo SVG (citrus/Florida shape matching the existing logo) -->
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="40" cy="44" r="30" fill="#f47c20"/>
+              <path d="M40 14 C40 14 52 24 52 44 C52 58 46 70 40 74 C34 70 28 58 28 44 C28 24 40 14 40 14Z" fill="#fff" opacity=".2"/>
+              <line x1="40" y1="14" x2="40" y2="74" stroke="#fff" stroke-width="2" opacity=".25"/>
+              <line x1="10" y1="44" x2="70" y2="44" stroke="#fff" stroke-width="2" opacity=".25"/>
+              <path d="M40 10 C40 10 36 4 32 4 C34 8 38 10 40 14 C42 10 46 8 48 4 C44 4 40 10 40 10Z" fill="#fff" opacity=".9"/>
             </svg>
+            <p class="hero-logo-title">Orange County Commissioner</p>
+            <p class="hero-logo-name">Julio Rocha</p>
+            <p class="hero-logo-sub">District 8 · 2026</p>
           </div>
-          <div class="hero-photo-caption">Julio Rocha — District 8</div>
         </div>
+
+        <!-- Right: Main copy -->
         <div class="hero-content">
-          <div class="hero-badge">Orange County Commissioner · District 8</div>
-          <h1 class="hero-headline">Results Over Résumés.<br>For District 8.</h1>
+          <div class="hero-badge">Orange County Commissioner &mdash; District 8</div>
+          <h1 class="hero-headline">Results Over&nbsp;Résumés.<br>For District 8.</h1>
           <p class="hero-subhead">
             Julio Rocha is a 26-year Orange County business leader running for County Commissioner District 8 to deliver real solutions on housing affordability, transportation, and economic opportunity.
           </p>
           <div class="hero-ctas">
-            <a href="#donate" class="btn btn-gold">Donate</a>
-            <a href="#involved" class="btn btn-outline">Volunteer</a>
+            <a href="https://secure.actblue.com/donate/juliorochafordistrict8" target="_blank" rel="noopener" class="btn btn-orange btn-large">Donate</a>
+            <a href="#involved" class="btn btn-outline-white btn-large">Volunteer</a>
           </div>
-          <p class="hero-election">
-            <strong>Election Day: August 18, 2026</strong> &mdash; Early Voting begins in August
-          </p>
+          <div class="hero-election">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span><strong>Election Day: August 18, 2026</strong> &mdash; Early Voting begins in August</span>
+          </div>
         </div>
+
       </div>
     </section>
+
+    <!-- Wave divider -->
+    <div class="wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="background:#2a1880;">
+        <path d="M0,48 C360,0 1080,0 1440,48 L1440,48 L0,48 Z" fill="#ffffff"/>
+      </svg>
+    </div>
 
     <!-- ===== 2. BIO SNAPSHOT ===== -->
     <section class="bio" id="bio">
       <div class="container bio-inner">
         <div class="bio-text">
           <span class="section-label">About the Candidate</span>
-          <h2>Meet Julio Rocha</h2>
+          <h2>Meet Julio Rocha, MBA</h2>
           <p>
             For 26 years, Julio has helped Orange County families protect what they've earned and build the future they deserve. As co-owner of Rocha Financial Group and a longtime Democratic leader, he's sat across the table from hundreds of neighbors facing rising housing costs, long commutes, and economic uncertainty—and helped them find real answers.
           </p>
+          <p>
+            A trusted financial professional with an MBA, Julio brings real-world business expertise—not political talking points—to every challenge District 8 faces.
+          </p>
           <ul class="bio-facts">
             <li>
-              <span class="fact-icon">&#9679;</span>
+              <span class="fact-icon">&#10003;</span>
               <span>26 years serving Orange County families as a small business owner</span>
             </li>
             <li>
-              <span class="fact-icon">&#9679;</span>
+              <span class="fact-icon">&#10003;</span>
               <span>Co-owner, Rocha Financial Group &ndash; insurance and financial planning</span>
             </li>
             <li>
-              <span class="fact-icon">&#9679;</span>
+              <span class="fact-icon">&#10003;</span>
               <span>Former treasurer for Congresswoman Val Demings' first campaign</span>
             </li>
             <li>
-              <span class="fact-icon">&#9679;</span>
+              <span class="fact-icon">&#10003;</span>
               <span>Chair, Hispanic Outreach Committee, Orange County Democratic Executive Committee</span>
             </li>
           </ul>
         </div>
         <div class="bio-stat-grid">
-          <div class="stat-card">
+          <div class="stat-card fade-up">
             <span class="stat-number">26</span>
             <span class="stat-label">Years Serving Orange County</span>
           </div>
-          <div class="stat-card">
+          <div class="stat-card fade-up">
             <span class="stat-number">100s</span>
             <span class="stat-label">Families Helped Directly</span>
           </div>
-          <div class="stat-card">
+          <div class="stat-card fade-up">
             <span class="stat-number">D8</span>
             <span class="stat-label">Our Home, Our Community</span>
           </div>
-          <div class="stat-card">
+          <div class="stat-card fade-up">
             <span class="stat-number">2026</span>
             <span class="stat-label">Time to Make a Change</span>
           </div>
@@ -116,15 +146,23 @@
 
     <!-- ===== 3. WHY I'M RUNNING ===== -->
     <section class="why" id="why">
-      <div class="container">
-        <span class="section-label">His Mission</span>
-        <h2>Why I'm Running</h2>
-        <div class="why-body">
+      <div class="container why-inner">
+        <div>
+          <span class="section-label">His Mission</span>
+          <h2>Why I'm Running</h2>
+          <div class="why-body">
+            <p>
+              I've spent my life helping families in District 8 make tough financial decisions—buying a first home, protecting a small business, planning for retirement. I see the same challenges over and over again: housing that's out of reach, roads that steal hours from our day, and jobs that don't keep up with the cost of living.
+            </p>
+            <p>
+              I'm running for County Commission because we don't need more political speeches. We need a commissioner who understands budgets, listens for a living, and knows how to turn plans into results. That's what I've done for 26 years in business, and that's exactly how I'll serve District 8.
+            </p>
+          </div>
+        </div>
+        <div class="why-card fade-up">
+          <p class="why-card-quote">"We don't need more political speeches. We need results."</p>
           <p>
-            I've spent my life helping families in District 8 make tough financial decisions—buying a first home, protecting a small business, planning for retirement. I see the same challenges over and over again: housing that's out of reach, roads that steal hours from our day, and jobs that don't keep up with the cost of living.
-          </p>
-          <p>
-            I'm running for County Commission because we don't need more political speeches. We need a commissioner who understands budgets, listens for a living, and knows how to turn plans into results. That's what I've done for 26 years in business, and that's exactly how I'll serve District 8.
+            Julio has spent 26 years solving real problems for real families. As County Commissioner, he'll bring that same focus, accountability, and results-driven mindset to every decision at the County Commission.
           </p>
         </div>
       </div>
@@ -135,9 +173,10 @@
       <div class="container">
         <span class="section-label">What We'll Do Together</span>
         <h2>Priorities for District 8</h2>
+        <p class="priorities-intro">Three focused commitments to make District 8 a place everyone can afford to call home.</p>
         <div class="priority-grid">
 
-          <div class="priority-card">
+          <div class="priority-card fade-up">
             <div class="priority-icon" aria-hidden="true">
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 42V20L24 8L40 20V42H28V30H20V42H8Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
@@ -151,7 +190,7 @@
             </ul>
           </div>
 
-          <div class="priority-card">
+          <div class="priority-card fade-up">
             <div class="priority-icon" aria-hidden="true">
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="4" y="28" width="40" height="8" rx="4" stroke="currentColor" stroke-width="2.5"/>
@@ -168,10 +207,11 @@
             </ul>
           </div>
 
-          <div class="priority-card">
+          <div class="priority-card fade-up">
             <div class="priority-icon" aria-hidden="true">
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M24 6L28 16H40L30 22L34 34L24 28L14 34L18 22L8 16H20L24 6Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M24 8C24 8 36 16 36 28C36 36 30 42 24 44C18 42 12 36 12 28C12 16 24 8 24 8Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M24 16L26 20H30L27 23L28 27L24 25L20 27L21 23L18 20H22L24 16Z" fill="currentColor" opacity=".3"/>
               </svg>
             </div>
             <h3>Real Opportunity for Working Families</h3>
@@ -189,17 +229,19 @@
     <!-- ===== 5. ENDORSEMENTS ===== -->
     <section class="endorsements" id="endorsements">
       <div class="container">
-        <span class="section-label">Community Support</span>
-        <h2>Backed by Leaders You Trust</h2>
-        <p class="endorse-intro">
-          Julio's campaign is powered by neighbors, small business owners, and community leaders from across District 8.
-        </p>
+        <div class="endorse-head fade-up">
+          <span class="section-label">Community Support</span>
+          <h2>Backed by Leaders You Trust</h2>
+          <p class="endorse-intro">
+            Julio's campaign is powered by neighbors, small business owners, and community leaders from across District 8.
+          </p>
+        </div>
         <div class="quote-grid">
-          <blockquote class="quote-card">
+          <blockquote class="quote-card fade-up">
             <p>"When I needed someone I could trust with every dollar, I chose Julio. Orange County can trust him too."</p>
             <footer>&mdash; Community Leader, District 8</footer>
           </blockquote>
-          <blockquote class="quote-card">
+          <blockquote class="quote-card fade-up">
             <p>"Julio has been there for our families for decades. He understands our struggles and fights for our future."</p>
             <footer>&mdash; Local Community Advocate</footer>
           </blockquote>
@@ -208,14 +250,27 @@
           <span>Local Small Business Owners</span>
           <span>Community &amp; Faith Leaders</span>
           <span>Democratic Activists &amp; Volunteers</span>
+          <span>Orange County Neighbors</span>
         </div>
       </div>
     </section>
 
+    <!-- ===== Orange CTA strip ===== -->
+    <div class="cta-strip">
+      <div class="container cta-strip-inner">
+        <div>
+          <h3>Join the Team Now!</h3>
+          <p>Winning District 8 starts with neighbors talking to neighbors. Add your name today.</p>
+        </div>
+        <a href="#involved" class="btn btn-outline-white btn-large">Get Involved</a>
+      </div>
+    </div>
+
     <!-- ===== 6. GET INVOLVED ===== -->
     <section class="involved" id="involved">
       <div class="container involved-inner">
-        <div class="involved-volunteer">
+
+        <div class="involved-volunteer fade-up">
           <span class="section-label">Take Action</span>
           <h2>Join Team Rocha</h2>
           <p>
@@ -244,62 +299,70 @@
             </div>
             <fieldset class="form-checkboxes">
               <legend>How can you help?</legend>
-              <label class="checkbox-label">
-                <input type="checkbox" name="help" value="doors" />
-                <span>Knock Doors</span>
-              </label>
-              <label class="checkbox-label">
-                <input type="checkbox" name="help" value="phones" />
-                <span>Phone Bank</span>
-              </label>
-              <label class="checkbox-label">
-                <input type="checkbox" name="help" value="event" />
-                <span>Host an Event</span>
-              </label>
-              <label class="checkbox-label">
-                <input type="checkbox" name="help" value="sign" />
-                <span>Yard Sign</span>
-              </label>
-              <label class="checkbox-label">
-                <input type="checkbox" name="help" value="other" />
-                <span>Other</span>
-              </label>
+              <div class="checkbox-grid">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="help" value="doors" />
+                  <span>Knock Doors</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="help" value="phones" />
+                  <span>Phone Bank</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="help" value="event" />
+                  <span>Host an Event</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="help" value="sign" />
+                  <span>Yard Sign</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="help" value="other" />
+                  <span>Other</span>
+                </label>
+              </div>
             </fieldset>
-            <button type="submit" class="btn btn-gold btn-full">Sign Me Up</button>
+            <button type="submit" class="btn btn-purple btn-full">Sign Me Up</button>
             <p class="form-success" id="vol-success" hidden>Thank you! We'll be in touch soon.</p>
           </form>
         </div>
 
-        <div class="involved-email">
+        <div class="involved-email fade-up">
           <span class="section-label">Stay In The Loop</span>
           <h2>Stay Connected</h2>
           <p>
             Get campaign updates, event invites, and ways to make a difference in District 8.
           </p>
-          <form class="email-form" id="email-form" novalidate>
-            <div class="form-group">
-              <label for="e-email">Email Address *</label>
-              <input type="email" id="e-email" name="email" placeholder="your@email.com" required />
-            </div>
-            <button type="submit" class="btn btn-gold btn-full">Join the Campaign</button>
-            <p class="form-success" id="email-success" hidden>You're on the list! Thank you.</p>
-          </form>
+          <div class="email-signup-box">
+            <form class="email-form" id="email-form" novalidate>
+              <div class="form-group">
+                <label for="e-email">Email Address *</label>
+                <input type="email" id="e-email" name="email" placeholder="your@email.com" required />
+              </div>
+              <button type="submit" class="btn btn-purple btn-full">Join the Campaign</button>
+              <p class="form-success" id="email-success" hidden>You're on the list! Thank you.</p>
+            </form>
+          </div>
 
           <div class="social-links">
-            <p>Follow the Campaign</p>
+            <p>Connect With Us</p>
             <div class="social-icons">
               <a href="#" class="social-icon" aria-label="Facebook">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
               </a>
-              <a href="#" class="social-icon" aria-label="Twitter / X">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              </a>
               <a href="#" class="social-icon" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="#" class="social-icon" aria-label="TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.54V6.79a4.85 4.85 0 01-1.01-.1z"/></svg>
+              </a>
+              <a href="#" class="social-icon" aria-label="X / Twitter">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               </a>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -311,23 +374,34 @@
         <p class="donate-desc">
           This race will be decided by who can build the strongest grassroots team. Your contribution—whether it's $10 or $500—helps us reach more voters at the doors, online, and in every corner of District 8.
         </p>
-        <div class="amount-grid" id="amount-grid" role="group" aria-label="Select donation amount">
-          <button class="amount-btn" data-amount="10">$10</button>
-          <button class="amount-btn" data-amount="25">$25</button>
-          <button class="amount-btn" data-amount="50">$50</button>
-          <button class="amount-btn active" data-amount="100">$100</button>
-          <button class="amount-btn" data-amount="250">$250</button>
-          <button class="amount-btn" data-amount="other">Other</button>
+
+        <!-- Donate trust signals -->
+        <div class="donate-trust">
+          <div class="trust-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Secure &amp; Encrypted</span>
+          </div>
+          <div class="trust-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Processed by ActBlue</span>
+          </div>
+          <div class="trust-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span>100% Goes to Campaign</span>
+          </div>
         </div>
-        <div class="custom-amount-wrap" id="custom-amount-wrap" hidden>
-          <label for="custom-amount">Enter Amount ($)</label>
-          <input type="number" id="custom-amount" placeholder="Enter amount" min="1" />
-        </div>
-        <a href="mailto:info@rocha4district8.com?subject=Donation Inquiry" class="btn btn-gold btn-large">
-          Contribute Securely
+
+        <a
+          href="https://secure.actblue.com/donate/juliorochafordistrict8"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-orange btn-large donate-main-btn"
+        >
+          Contribute Securely &rarr;
         </a>
+
         <p class="donate-legal">
-          Contributions are not tax-deductible. Maximum contribution: $1,000 per person per election cycle under Florida law.
+          Contributions are not tax-deductible. Maximum contribution: $1,000 per person per election cycle under Florida law. Paid for by Rocha for District 8.
         </p>
       </div>
     </section>
@@ -335,45 +409,68 @@
     <!-- ===== 8. DISTRICT & CONTACT ===== -->
     <section class="district" id="contact">
       <div class="container district-inner">
-        <div class="district-info">
+        <div class="district-info fade-up">
           <span class="section-label">Our Community</span>
           <h2>District 8, Our Home</h2>
           <p>
             From Meadow Woods to Lake Nona and the neighborhoods in between, District 8 deserves a commissioner who knows our communities and is accessible to every resident. Julio will hold regular community meetings, answer your questions, and bring your voice to the County Commission.
           </p>
           <div class="district-map" aria-label="District 8 coverage area">
-            <svg viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stylized map of District 8">
-              <rect width="400" height="280" rx="8" fill="#1a3a6b"/>
-              <path d="M80 200 L120 120 L180 90 L260 100 L320 150 L310 220 L200 240 L100 230 Z" fill="#2d5fa6" stroke="#c8a44a" stroke-width="2"/>
-              <circle cx="150" cy="170" r="6" fill="#c8a44a"/>
-              <text x="162" y="174" fill="#fff" font-size="11" font-family="sans-serif">Meadow Woods</text>
-              <circle cx="260" cy="150" r="6" fill="#c8a44a"/>
-              <text x="272" y="154" fill="#fff" font-size="11" font-family="sans-serif">Lake Nona</text>
-              <text x="160" y="220" fill="#c8a44a" font-size="16" font-weight="bold" text-anchor="middle" font-family="sans-serif">District 8</text>
+            <svg viewBox="0 0 400 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stylized map of District 8">
+              <rect width="400" height="260" rx="10" fill="#f0eeff"/>
+              <path d="M80 200 L110 110 L175 82 L265 95 L325 148 L315 215 L200 232 L90 222 Z" fill="#c8bff0" stroke="#4a35c8" stroke-width="2"/>
+              <circle cx="148" cy="165" r="7" fill="#4a35c8"/>
+              <text x="160" y="169" fill="#23243a" font-size="11" font-family="sans-serif" font-weight="600">Meadow Woods</text>
+              <circle cx="260" cy="145" r="7" fill="#f47c20"/>
+              <text x="272" y="149" fill="#23243a" font-size="11" font-family="sans-serif" font-weight="600">Lake Nona</text>
+              <text x="200" y="210" fill="#4a35c8" font-size="18" font-weight="800" text-anchor="middle" font-family="sans-serif">DISTRICT 8</text>
             </svg>
           </div>
         </div>
-        <div class="contact-info">
+
+        <div class="contact-info fade-up">
           <span class="section-label">Reach Us</span>
           <h2>Contact the Campaign</h2>
-          <ul class="contact-list">
-            <li>
-              <span class="contact-label">Campaign</span>
-              <span>Rocha for District 8</span>
-            </li>
-            <li>
-              <span class="contact-label">Email</span>
-              <a href="mailto:info@rocha4district8.com">info@rocha4district8.com</a>
-            </li>
-            <li>
-              <span class="contact-label">Phone</span>
-              <a href="tel:+14070000000">(407) XXX-XXXX</a>
-            </li>
-            <li>
-              <span class="contact-label">Mailing</span>
-              <address>P.O. Box 771021<br>Orlando, FL 32877</address>
-            </li>
-          </ul>
+          <div class="contact-card">
+            <ul class="contact-list">
+              <li>
+                <div class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <span class="contact-item-label">Office Address</span>
+                  <span class="contact-item-value">390 N. Orange Ave., Suite 2300<br>Orlando, FL 32801</span>
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.95 11 19.79 19.79 0 01.88 2.38 2 2 0 012.86.22h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.08 6.08l1.28-1.28a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.08 15l-.16 1.92z"/></svg>
+                </div>
+                <div>
+                  <span class="contact-item-label">Phone</span>
+                  <a href="tel:+14077825188" class="contact-item-value">+1 (407) 782-5188</a>
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <span class="contact-item-label">Email</span>
+                  <a href="mailto:info@rocha4district8.com" class="contact-item-value">info@rocha4district8.com</a>
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <div>
+                  <span class="contact-item-label">Mailing Address</span>
+                  <address class="contact-item-value">P.O. Box 771021<br>Orlando, FL 32877</address>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -384,8 +481,29 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-logo">
-        <span class="logo-name">Julio Rocha</span>
-        <span class="logo-seat">District 8</span>
+        <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="22" r="15" fill="#f47c20"/>
+          <path d="M20 10 C20 10 26 15 26 24 C26 29 23 33 20 35 C17 33 14 29 14 24 C14 15 20 10 20 10Z" fill="#fff" opacity=".2"/>
+          <path d="M20 7 C20 7 18 4 16 4 C17 5.5 19 7 20 9 C21 7 23 5.5 24 4 C22 4 20 7 20 7Z" fill="#fff" opacity=".8"/>
+        </svg>
+        <div class="nav-logo-text">
+          <span class="logo-name">Julio Rocha</span>
+          <span class="logo-seat">District 8 · Orange County</span>
+        </div>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.54V6.79a4.85 4.85 0 01-1.01-.1z"/></svg>
+        </a>
+        <a href="#" aria-label="X / Twitter">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
       </div>
       <p class="footer-legal">
         Political Advertisement Paid for and Approved by Julio Rocha, Candidate for Orange County Commissioner District 8.

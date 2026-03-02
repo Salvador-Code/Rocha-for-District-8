@@ -294,35 +294,6 @@ h2 {
 
 /* Hero photo (right on desktop) */
 .hero-photo-col { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
-.hero-photo {
-  max-width: 360px; width: 100%;
-  border-radius: var(--radius-lg);
-  border: 2.5px dashed rgba(255,255,255,.3);
-  background: rgba(255,255,255,.07);
-}
-.hero-photo .img-ph-inner { color: rgba(255,255,255,.75); }
-.hero-photo .img-ph-inner svg { opacity: .4; stroke: rgba(255,255,255,.75); }
-.hero-photo .img-ph-inner span { color: rgba(255,255,255,.9); }
-.hero-photo .img-ph-inner small { color: rgba(255,255,255,.45); }
-
-.hero-photo-card {
-  background: rgba(255,255,255,.1);
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(255,255,255,.22);
-  border-radius: 10px;
-  padding: .85rem 1.6rem;
-  text-align: center;
-  max-width: 280px; width: 100%;
-}
-.photo-card-top { display: flex; justify-content: center; align-items: baseline; gap: .5rem; margin-bottom: .2rem; }
-.photo-card-name { font-size: 1.2rem; font-weight: 800; color: var(--white); letter-spacing: -.01em; }
-.photo-card-mba {
-  font-size: .62rem; font-weight: 700; letter-spacing: .1em;
-  background: var(--orange); color: var(--white);
-  padding: .15rem .45rem; border-radius: 4px;
-}
-.photo-card-race { display: block; font-size: .72rem; color: rgba(255,255,255,.65); letter-spacing: .04em; }
-.photo-card-district { display: block; font-size: .75rem; font-weight: 700; color: var(--orange); letter-spacing: .06em; text-transform: uppercase; margin-top: .15rem; }
 
 /* Scroll cue */
 .hero-scroll-cue {
@@ -381,8 +352,7 @@ h2 {
 .bio { background: var(--white); padding: var(--section-pad); }
 .bio-inner { display: grid; grid-template-columns: 1fr; gap: 3.5rem; align-items: start; margin-bottom: 3.5rem; }
 
-.bio-photo-col { display: flex; flex-direction: column; gap: 1.25rem; }
-.bio-portrait { max-width: 380px; }
+.bio-photo-col { display: flex; flex-direction: column; gap: 1.25rem; align-items: flex-start; }
 .bio-press-quote {
   background: var(--purple-light); border-left: 4px solid var(--purple);
   border-radius: 0 var(--radius) var(--radius) 0;
@@ -427,8 +397,7 @@ h2 {
 .why { background: var(--off-white); padding: var(--section-pad); }
 .why-inner { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: start; }
 
-.why-photo-col { display: flex; flex-direction: column; gap: 1.25rem; }
-.why-photo { max-width: 420px; }
+.why-photo-col { display: flex; flex-direction: column; gap: 1.25rem; align-items: flex-start; }
 
 .why-pullquote {
   background: var(--purple); border-radius: var(--radius); padding: 1.75rem 1.75rem 1.5rem;
@@ -817,6 +786,111 @@ h2 {
 .gallery-item:nth-child(4) { transition-delay: .18s; }
 .gallery-item:nth-child(5) { transition-delay: .24s; }
 .gallery-item:nth-child(6) { transition-delay: .30s; }
+
+/* ============================================================
+   REAL PHOTO STYLES
+   ============================================================ */
+
+/* --- Nav logo --- */
+.nav-logo-img {
+  height: 54px;
+  width: auto;
+  display: block;
+  /* White bg badge blends naturally on white nav */
+}
+@media (max-width: 360px) { .nav-logo-img { height: 44px; } }
+
+/* --- Hero candidate photo --- */
+.hero-photo-frame {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow:
+    0 0 0 4px rgba(255,255,255,.15),
+    0 32px 72px rgba(0,0,0,.45);
+  position: relative;
+}
+.hero-photo-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 8%;
+  display: block;
+  transition: transform .6s ease;
+}
+.hero-photo-frame:hover img { transform: scale(1.03); }
+
+/* Campaign badge card (below hero photo) */
+.hero-badge-card {
+  background: rgba(255,255,255,.96);
+  border-radius: var(--radius);
+  padding: .65rem 1rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,.3);
+  max-width: 220px;
+  width: 100%;
+}
+.hero-badge-logo { width: 100%; height: auto; display: block; }
+
+/* --- Bio portrait --- */
+.bio-portrait-frame {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+.bio-portrait-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 8%;
+  display: block;
+  transition: transform .5s ease;
+}
+.bio-portrait-frame:hover img { transform: scale(1.025); }
+
+/* --- Why I'm Running photo --- */
+.why-photo-frame {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.why-photo-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+  transition: transform .5s ease;
+}
+.why-photo-frame:hover img { transform: scale(1.03); }
+
+/* --- District map photo --- */
+.district-map img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+}
+
+/* --- Footer badge --- */
+.footer-logo-wrap {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: .65rem 1.1rem;
+  display: inline-block;
+  box-shadow: 0 4px 16px rgba(0,0,0,.15);
+}
+.footer-badge-img {
+  height: 70px;
+  width: auto;
+  display: block;
+}
 
 /* ============================================================
    REDUCED MOTION

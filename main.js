@@ -83,7 +83,6 @@
 (function initFadeUp() {
   const animatable = [
     '.hero-content',
-    '.hero-photo-col',
     '.proof-item',
     '.bio-photo-col',
     '.bio-text',
